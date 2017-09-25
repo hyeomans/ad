@@ -231,7 +231,7 @@ module.exports = {
       const filter = `(|(userPrincipalName=${userName}@${domain})(sAMAccountName=${userName}))`;
       const params = {
         filter,
-        includeMembership: ['all'],
+        includeMembership: [],
         includeDeleted: false
       };
       this.ad.find(params, (err, results) => {
